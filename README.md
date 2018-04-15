@@ -11,11 +11,13 @@ My boilerplate for developing APIs with Express and MongoDB.
 
   ```
    $ export PORT=3000
+   $ export DB_URL=mongodb://localhost/testdb
   ```
   `.env` files are also supported - create a `.env` file in the root directory of the project, and define environment variables there.
 
   ```
   PORT=3000
+  DB_URL=mongodb://localhost/testdb
   NODE_ENV=production
   ```
 
