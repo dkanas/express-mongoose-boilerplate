@@ -1,9 +1,13 @@
 const router = require('express').Router()
 
 // import controllers here
-const helloController = require('./controllers/helloController')
+const catController = require('./controllers/catController')
 
 // set up routes here
-router.get('/', helloController.hello)
+router.post('/cats', catController.create)
+router.get('/cats', catController.list)
+router.get('/cats/:id', catController.get)
+router.put('/cats/:id', catController.update)
+router.delete('/cats/:id', catController.delete)
 
 module.exports = router
