@@ -37,6 +37,8 @@ module.exports = catController = {
       .findByIdAndRemove(req.params.id)
       .then(cat => cat
         ? res.json({ message: 'Cat removed successfully!' })
-        : res.status(404).json({ message: `Cat not found` }))
+        : res.status(404).json({ message: `Cat not found` })
+      )
+      .catch(next)
   }
 }
